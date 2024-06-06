@@ -1,0 +1,23 @@
+<div class="btn btn-primary">
+  {{title}}
+</div>
+<br>
+<table class="">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th> out stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Tasks ; let i=index; first as isFirst; " >
+      <td>{{i+1}}</td>
+      <td>{{item}}</td>
+      <td>
+        <div *ngIf="item!=null">{{item.toUpperCase}}</div>
+                <div *ngIf="item==null">{{item}}</div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,53 @@
+<table class="table ">
+    <thead class="bg-dark text-light">
+        <tr >
+            <th>Id</th>
+            <th>Name</th>
+            <th>image</th>
+            <th>Price</th>
+            <th>NeededQuantatity</th>
+            <th>Buy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let item of productlist">
+            <td>{{item?.Id}}</td>
+            <td>{{item?.Name}}</td>
+            <td><img [src]="item?.image" width="100" height="100" alt="jkjkljkl"></td>
+            <td>{{item?.Price}}</td>
+            <td> <input #itemscount  type="number" class="form-control"></td>
+            <td><button type="button" class="btn btn-danger" (click)="buy(item.Id,itemscount.value)">Buy</button> </td>
+        </tr> -->
+    </tbody>
+</table>
+
+<div>
+    {{description}}
+</div>
+<h1 *ngIf="true">
+Hello
+</h1>
+<div>
+    this is a div
+</div>
+<ul *ngFor="let item of productlist; let i=index; let cou=count ; ">
+    <li>{{item.name}}{{cou+1}}</li>
+    <li *ngIf="item.price>100; else totalprice"> {{item.price*10000}}</li>
+    <ng-template #totalprice>totalaprice</ng-template>
+    <ng-container>
+
+    </ng-container>
+ <!--    <div  [ngSwitch]="item.name">
+    <p *ngSwitchCase="jhhj">
+    fdgdf
+    </p>
+    <p *ngSwitchCase="vfdfd">
+    sd
+    </p>
+    <p *ngSwitchDefault>
+        kkk
+    </p>
+    </div> -->
+
+
+</ul>
